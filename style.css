@@ -18,16 +18,6 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.text {
-    text-transform: uppercase;
-    font-size: 3em;
-    font-family: monospace;
-    letter-spacing: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .main {
     display: flex;
     flex-direction: column;
@@ -38,21 +28,54 @@ body {
 }
 
 .screen {
-    width: 80%;
-    margin: 25px auto;
+    width: 95%;
+    height: 28vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    margin-top: 5px;
 }
 
 #screen, #ans {
     width: 100%;
-    height: 100px;
+    height: 50px;
     background-color: var(--bg);
     border: none;
+}
+
+#screen {
+    position: relative;
+}
+
+#screen:focus-visible, #ans:focus-visible {
+    outline: none;
+}
+
+#screen + i {
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background-color: gray;
+    right: 15px;
+    top: 10px;
+    animation-name: blink;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    opacity: 1;
+}
+
+@keyframes blink {
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
 
 .container {
     display: grid;
     grid-template: repeat(5, 1fr) / repeat(4, 1fr);
-    margin: 50px;
+    height: 71vh;
 }
 
 .key {
@@ -62,8 +85,8 @@ body {
     font-size: 2rem;
     background-color: var(--numbers);
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin: 5px;
     font-weight: bold;
     cursor: pointer;
@@ -82,8 +105,10 @@ body {
 }
 
 .hr {
-    width: 80%;
+    width: 95%;
     border-top: 0;
     border-left: 0;
     border-right: 0;
+    border-bottom: 1px solid gray;
+    margin: 5px auto;
 }
