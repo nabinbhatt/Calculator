@@ -43,6 +43,11 @@ body {
     height: 50px;
     background-color: var(--bg);
     border: none;
+    color: white;
+    text-align: right;
+    margin-right: 16px;
+    font-size: 2rem;
+    letter-spacing: 2px;
 }
 
 #screen {
@@ -96,12 +101,16 @@ body {
     background-color: var(--equal);
 }
 
-.operator {
+.operator,
+.brackets,
+.multip,
+.divide,
+.percent {
     color: var(--equal);
 }
 
-.cancel {
-    color: red;
+.clear {
+    color: #dd0000;
 }
 
 .hr {
