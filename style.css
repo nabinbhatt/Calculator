@@ -36,6 +36,7 @@ body {
     justify-content: flex-start;
     gap: 1em;
     margin-top: 5px;
+    max-width: 360px;
 }
 
 #screen, #ans {
@@ -120,4 +121,5 @@ body {
     border-right: 0;
     border-bottom: 1px solid gray;
     margin: 5px auto;
+    max-width: 360px;
 }
