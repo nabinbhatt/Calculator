@@ -55,6 +55,10 @@ body {
     position: relative;
 }
 
+#ans {
+    opacity: 60%;
+}
+
 #screen::placeholder {
     color: #808080;
 }
